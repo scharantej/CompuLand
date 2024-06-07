@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ product['name'] }}</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>{{ product['name'] }}</h1>
+<p>{{ product['specs'] }}</p>
+<span>{{ product['price'] }}</span>
+<br>
+<a href="{{ url_for('purchase', product_id=product['id']) }}">Purchase</a>
+</body>
+</html>
+
