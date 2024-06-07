@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Computer Sales Landing Page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Welcome to Computer Sales!</h1>
+<p>We have a wide selection of computers to choose from, all at great prices.</p>
+
+<ul>
+{% for product in products %}
+<li>
+<a href="{{ url_for('product_detail', product_id=product['id']) }}">{{ product['name'] }}</a>
+<span>{{ product['price'] }}</span>
+</li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
